@@ -1,0 +1,12 @@
+<div *ngIf="post; else loading">
+  <h2>{{ post.title }}</h2>
+  <p><strong>By:</strong> {{ post.firstName }} {{ post.lastName }} ({{ post.userName }})</p>
+ <p><strong>Date Created:</strong> {{ post.datecreated || post.dateCreated }}</p>
+  <p>{{ post.body }}</p>
+  <br>
+  <a routerLink="/">Back to Posts</a>
+</div>
+
+<ng-template #loading>
+  <p>Loading post details...</p>
+</ng-template>
